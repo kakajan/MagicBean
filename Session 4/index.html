@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #screen {
+            padding: 0;
+        }
+        #screen li {
+            list-style: none;
+            border: 1px solid #000;
+            padding: 5px 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="a">
+    <button onclick="addToZanbil()">Add</button>
+    <ul id="screen"></ul>
+    <script>
+       const input = document.getElementById('a')
+       const screen = document.getElementById('screen')
+       const zanbil = [];
+       function addToZanbil () {
+        zanbil.push(input.value)
+        display()
+        input.value = ''
+        input.focus()
+       }
+       function display(){
+        const element = document.createElement("li")
+        element.appendChild(document.createTextNode(zanbil.length + '- ' + zanbil[zanbil.length - 1]));
+        screen.append(element)
+       }
+    </script>
+</body>
+</html>

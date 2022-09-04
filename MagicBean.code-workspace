@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "Session 2"
+    },
+    {
+      "path": "Session 3"
+    },
+    {
+      "path": "Session 4"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Session 4"
+  }
+}
