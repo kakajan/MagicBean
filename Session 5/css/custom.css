@@ -1,0 +1,16 @@
+.calcGhab {
+    background-color: #ccc;
+    height: 80vh;
+    margin-top: 100px;
+}
+#screen {
+    background-color: black;
+    border-radius: 8px;
+    height: 80px;
+    padding: 8px;
+    color: white;
+    font-size: 42px;
+}
+.numbers {
+    border-radius: 15px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 calcGhab">
+          <div id="screen" class="mt-4"></div>
+          <div class="numbers mt-4">
+            <div
+              id="numbers"
+              class="row justify-content-center text-center"
+            ></div>
+            <div class="row justify-content-center">
+              <div class="col">
+                <button
+                  onclick="sum()"
+                  class="btn btn-secondary w-100 p-2 rounded-4 mt-3"
+                >
+                  +
+                </button>
+              </div>
+              <div class="col">
+                <button
+                  onclick="minus()"
+                  class="btn btn-secondary w-100 p-2 rounded-4 mt-3"
+                >
+                  -
+                </button>
+              </div>
+              <div class="col">
+                <button
+                  onclick="calculate()"
+                  class="btn btn-secondary w-100 p-2 rounded-4 mt-3"
+                >
+                  =
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+https://www.w3schools.com/js/js_loop_for.asp
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const screen = document.getElementById("screen");
+      let oldValue = "";
+      function displayNumber(x) {
+        let result = oldValue + x;
+        screen.textContent = result;
+        oldValue = result;
+      }
+      const numbers = document.getElementById("numbers");
+      let number = "";
+      const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+      for (let i = 0; i < numberArray.length; i++) {
+        number += `<div class="col-4"><button onclick="displayNumber(${numberArray[i]})" class="btn btn-primary rounded-4 w-100 mt-2">${numberArray[i]}</button> </div>`;
+      }
+      numbers.innerHTML = number;
+      let aPar, bPart, operationType;
+
+
+      function sum() {
+        screen.textContent = ""
+        aPart = oldValue
+        oldValue = ""
+        operationType = 'sum'
+      }
+
+      function minus() {
+        screen.textContent = ""
+        aPart = oldValue
+        oldValue = ""
+        operationType = 'minus'
+      }
+
+
+      function calculate() {
+        bPart = oldValue
+        if(operationType == 'sum') {
+            screen.textContent = parseInt(aPart) + parseInt(bPart)
+        } else {
+            screen.textContent = parseInt(aPart) - parseInt(bPart)
+        }   
+      }
+    </script>
+  </body>
+</html>
