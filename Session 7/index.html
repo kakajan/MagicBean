@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result"></div>
+
+    <script>
+      //   const students = [
+      //     {
+      //       fullName: "U.Q SM",
+      //       code: 203154545,
+      //       score: 18,
+      //     },
+      //     {
+      //       fullName: "Ali rg",
+      //       code: 203154546,
+      //       score: 19,
+      //     },
+      //     {
+      //       fullName: "Moeen",
+      //       code: 203154547,
+      //       score: 10,
+      //     },
+      //     {
+      //       fullName: "Alen",
+      //       code: 203154548,
+      //       score: 20,
+      //     },
+      //     {
+      //       fullName: "Ihsan",
+      //       code: 203154549,
+      //       score: 17,
+      //     },
+      //   ];
+      //   const screen = document.getElementById("result");
+      //   screen.innerHTML = "Students count: " + students.length;
+      //   let content = "";
+      //   let sum = 0
+      //   students.forEach((item) => {
+      //     content +=
+      //       item.code + " - " + item.fullName + " | Score:" + item.score + "<br>";
+      //       sum += item.score
+      //   });
+      //   content += 'The Average is: ' + (sum/students.length)
+      //   screen.innerHTML = content;
+      products = [
+        {
+          type: "boot",
+          size: "40",
+          price: "1000",
+        },
+        {
+          type: "katooni",
+          size: "41",
+          price: "200",
+        },
+        {
+          type: "formal",
+          size: "42",
+          price: "300",
+        },
+        {
+          type: "sport",
+          size: "42",
+          price: "400",
+        },
+        {
+          type: "formal2",
+          size: "42",
+          price: "500",
+        },
+        {
+          type: "sport2",
+          size: "42",
+          price: "600",
+        },
+      ];
+      let firstTime = true;
+      let minVal, result;
+      products.forEach((product) => {
+        if (firstTime) {
+          minVal = product.price;
+          result = product
+          firstTime = false
+        } else if(product.price < minVal) {
+                minVal = product.price
+                result = product
+            }
+        }
+      });
+      console.log(result.type);
+    </script>
+  </body>
+</html>
