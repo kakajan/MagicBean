@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+    .animation1 {
+        transform: scale(2);
+        transition: all 0.3s;
+    }
+  </style>
+</head>
+<body>
+    <h1 class="animate__animated animate__fadeInUp">Salam man ye elemanam</h1>
+    
+    <button onclick="animateIt()">Animate It</button>
+
+    <img id="myElem" width="200" src="https://pngimg.com/uploads/birds/birds_PNG49.png" alt="">
+
+    <script>
+        function animateIt() {
+            document.getElementById('myElem').classList.add("animation1")
+        }
+    </script>
+</body>
+</html>
