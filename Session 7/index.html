@@ -52,7 +52,7 @@
         {
           type: "boot",
           size: "40",
-          price: "1000",
+          price: "100",
         },
         {
           type: "katooni",
@@ -77,7 +77,7 @@
         {
           type: "sport2",
           size: "42",
-          price: "600",
+          price: "200",
         },
       ];
       let firstTime = true;
@@ -87,7 +87,8 @@
           minVal = product.price;
           result = product
           firstTime = false
-        } else if(product.price < minVal) {
+        } else {
+            if(product.price < minVal) {
                 minVal = product.price
                 result = product
             }
